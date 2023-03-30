@@ -4,7 +4,7 @@
   "description": "A Discord Web App based on the Electron Engine.",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
+    "dev": "electron .",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
     "build-linux": "electron-builder -l tar.gz --arm64 --armv7l --x64 --ia32"

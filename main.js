@@ -130,14 +130,14 @@ function createWindow () {
 		icon: appIcon,
 		webPreferences: {
 			nodeIntegration: false, // won't work with the true value
-			devTools: false,
+			devTools: true,
 			preload: `${appDir}/notify.js` // a way to do a ping–pong
 		}
 	})
 	win.loadURL(appURL,{userAgent: fakeUserAgent})
 	win.setAutoHideMenuBar(true);
 	win.setMenuBarVisibility(false);
-
+	win.openDevTools();
 	// Contex Menu with spell checker
 
 	win.webContents.on('context-menu', (event, params) => {
