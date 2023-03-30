@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "dev": "electron .",
-    "pack": "electron-builder --dir",
+    "pack": "electron-builder -w",
     "dist": "electron-builder",
     "build-linux": "electron-builder -l tar.gz --arm64 --armv7l --x64 --ia32"
   },
@@ -44,6 +44,12 @@
         ]
       },
       "category": "Network"
+    },
+    "win": {
+      "icon": "icons/app.png",
+      "target": [
+        "nsis"
+      ]
     },
     "extraResources": [
       {
